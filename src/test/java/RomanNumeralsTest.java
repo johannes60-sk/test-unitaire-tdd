@@ -82,4 +82,12 @@ public class RomanNumeralsTest {
         assertEquals("MMXXIV", RomanNumerals.convertToRoman(2024));
     }
 
+    @Test
+    public void testInvalidInputZero() {
+        IllegalArgumentException thrown = assertThrows(IllegalArgumentException.class, () -> {
+            RomanNumerals.convertToRoman(0);
+        });
+        assertEquals("Le nombre doit être entre 1 et 3000", thrown.getMessage());
+    }
+
 }
