@@ -72,4 +72,14 @@ public class RomanNumeralsTest {
         assertEquals("M", RomanNumerals.convertToRoman(1000));
     }
 
+    @Test
+    public void testConvert1987ToMCMLXXXVII() {
+        assertEquals("MCMLXXXVII", RomanNumerals.convertToRoman(1987));
+    }
+
+    @Test
+    public void testConvert2024ToMMXXIV() {
+        assertEquals("MMXXIV", RomanNumerals.convertToRoman(2024));
+    }
+
 }
