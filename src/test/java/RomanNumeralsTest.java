@@ -1,3 +1,4 @@
+import static org.junit.Assert.assertThrows;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 import org.example.RomanNumerals;
@@ -86,6 +87,14 @@ public class RomanNumeralsTest {
     public void testInvalidInputZero() {
         IllegalArgumentException thrown = assertThrows(IllegalArgumentException.class, () -> {
             RomanNumerals.convertToRoman(0);
+        });
+        assertEquals("Le nombre doit être entre 1 et 3000", thrown.getMessage());
+    }
+
+    @Test
+    public void testInvalidInputAbove3000() {
+        IllegalArgumentException thrown = assertThrows(IllegalArgumentException.class, () -> {
+            RomanNumerals.convertToRoman(3001);
         });
         assertEquals("Le nombre doit être entre 1 et 3000", thrown.getMessage());
     }
