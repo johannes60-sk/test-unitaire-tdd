@@ -25,4 +25,49 @@ public class RomanNumeralsTest {
     public void testConvert4ToIV() {
         assertEquals("IV", RomanNumerals.convertToRoman(4));
     }
+
+    @Test
+    public void testConvert10ToX() {
+        assertEquals("X", RomanNumerals.convertToRoman(10));
+    }
+
+    @Test
+    public void testConvert40ToXL() {
+        assertEquals("XL", RomanNumerals.convertToRoman(40));
+    }
+
+    @Test
+    public void testConvert50ToL() {
+        assertEquals("L", RomanNumerals.convertToRoman(50));
+    }
+
+    @Test
+    public void testConvert90ToXC() {
+        assertEquals("XC", RomanNumerals.convertToRoman(90));
+    }
+
+    @Test
+    public void testConvert100ToC() {
+        assertEquals("C", RomanNumerals.convertToRoman(100));
+    }
+
+    @Test
+    public void testConvert400ToCD() {
+        assertEquals("CD", RomanNumerals.convertToRoman(400));
+    }
+
+    @Test
+    public void testConvert500ToD() {
+        assertEquals("D", RomanNumerals.convertToRoman(500));
+    }
+
+    @Test
+    public void testConvert900ToCM() {
+        assertEquals("CM", RomanNumerals.convertToRoman(900));
+    }
+
+    @Test
+    public void testConvert1000ToM() {
+        assertEquals("M", RomanNumerals.convertToRoman(1000));
+    }
 }
